@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Media, Arts & Philanthropy | Adagache Group</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    .media-gradient {
+      background: linear-gradient(135deg, #ff416c, #ff4b2b, #d4af37);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .foundation-gradient {
+      background: linear-gradient(135deg, #fff4c7 0%, #d4af37 50%, #f3df9b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ===== YOUTUBE CHANNEL CARDS ===== */
+    .yt-channels-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+      margin-top: 50px;
+    }
+    .yt-channel-card {
+      background: linear-gradient(160deg, #111 0%, #080808 100%);
+      border: 1px solid rgba(212,175,55,0.1);
+      border-radius: 28px;
+      overflow: hidden;
+      text-decoration: none;
+      transition: all 0.4s;
+      display: flex;
+      flex-direction: column;
+    }
+    .yt-channel-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(255,0,0,0.3);
+      box-shadow: 0 20px 50px rgba(255,0,0,0.1);
+    }
+    .yt-channel-banner {
+      width: 100%;
+      height: 110px;
+      object-fit: cover;
+      display: block;
+    }
+    .yt-channel-body {
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex: 1;
+    }
+    .yt-channel-icon {
+      width: 56px; height: 56px;
+      background: #ff0000;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem;
+      color: white;
+      flex-shrink: 0;
+    }
+    .yt-channel-info h4 {
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 4px;
+      color: white;
+    }
+    .yt-channel-info p {
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .yt-subscribe-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #ff0000;
+      color: white;
+      border-radius: 6px;
+      padding: 5px 14px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      margin-top: 8px;
+    }
+
+    /* ===== KING JESUS EP ===== */
+    .ep-section {
+      background: linear-gradient(145deg, #0a0006 0%, #0d0d0d 100%);
+      border-top: 1px solid rgba(212,175,55,0.1);
+      border-bottom: 1px solid rgba(212,175,55,0.1);
+    }
+    .ep-container {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .ep-artwork {
+      position: relative;
+      border-radius: 32px;
+      overflow: hidden;
+      background: linear-gradient(145deg, #1a0010, #0a0a0a);
+      border: 1px solid rgba(212,175,55,0.2);
+      padding: 36px;
+      text-align: center;
+    }
+    .ep-cover-img {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(212,175,55,0.2);
+      margin: 0 auto 24px;
+      display: block;
+    }
+    .ep-rotating-icon {
+      font-size: 7rem;
+      display: block;
+      animation: spinRecord 8s linear infinite;
+      filter: drop-shadow(0 0 30px rgba(212,175,55,0.4));
+      margin: 0 auto 24px;
+    }
+    @keyframes spinRecord {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .ep-artwork h3 {
+      font-size: 1.5rem;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+    .ep-artwork p {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .ep-details {}
+    .ep-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(212,175,55,0.1);
+      border: 1px solid rgba(212,175,55,0.25);
+      border-radius: 40px;
+      padding: 7px 18px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 3px;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+    .ep-details h2 {
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+    .ep-details p {
+      color: #bbb;
+      line-height: 1.85;
+      font-size: 0.95rem;
+      margin-bottom: 28px;
+    }
+
+    .ep-tracklist {
+      list-style: none;
+      margin-bottom: 30px;
+      background: rgba(0,0,0,0.3);
+      border-radius: 18px;
+      border: 1px solid rgba(212,175,55,0.1);
+      overflow: hidden;
+    }
+    .ep-track {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      transition: background 0.25s;
+    }
+    .ep-track:last-child { border-bottom: none; }
+    .ep-track:hover { background: rgba(212,175,55,0.05); }
+    .ep-track-num {
+      width: 28px; height: 28px;
+      background: rgba(212,175,55,0.1);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.72rem; font-weight: 800;
+      color: var(--gold); flex-shrink: 0;
+    }
+    .ep-track-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+      flex: 1;
+    }
+    .ep-track-dur {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .ep-stream-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 32px;
+      border-radius: 50px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: 0.3s;
+      background: linear-gradient(135deg, #ff6b35, #f7931a);
+      color: white;
+    }
+    .ep-stream-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(255,107,53,0.35);
+    }
+
+    /* ===== VIDEO GRID ===== */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .video-card {
+      background: linear-gradient(160deg, #111 0%, #080808 100%);
+      border: 1px solid rgba(212,175,55,0.1);
+      border-radius: 24px;
+      overflow: hidden;
+      transition: all 0.4s;
+      text-decoration: none;
+      display: block;
+    }
+    .video-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(212,175,55,0.3);
+      box-shadow: 0 20px 40px rgba(212,175,55,0.1);
+    }
+    .thumbnail-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      background: #000;
+      overflow: hidden;
+    }
+    .thumbnail-wrapper img {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+    .video-card:hover .thumbnail-wrapper img { transform: scale(1.05); }
+    .play-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.3s;
+    }
+    .play-btn-icon {
+      width: 64px; height: 64px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: #000; font-size: 1.5rem; padding-left: 4px;
+      box-shadow: 0 0 30px rgba(212,175,55,0.4);
+      transition: transform 0.3s;
+    }
+    .video-card:hover .play-btn-icon { transform: scale(1.1); }
+    .video-info { padding: 24px; }
+    .video-tag {
+      font-size: 0.7rem; text-transform: uppercase;
+      letter-spacing: 2px; color: var(--gold);
+      font-weight: 700; margin-bottom: 8px; display: inline-block;
+    }
+    .video-title {
+      font-size: 1.1rem; font-weight: 700; line-height: 1.4; color: var(--text);
+    }
+    .yt-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,0,0,0.12);
+      border: 1px solid rgba(255,0,0,0.25);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: #ff4444;
+      margin-top: 10px;
+    }
+
+    /* Foundation */
+    .foundation-box {
+      background: linear-gradient(150deg, #121212 0%, #0a0a0a 100%);
+      border: 1px solid var(--border);
+      border-radius: 36px;
+      padding: 60px;
+      margin-top: 50px;
+      position: relative;
+      overflow: hidden;
+    }
+    .foundation-box::before {
+      content: '';
+      position: absolute;
+      top: -50%; right: -20%;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(212,175,55,0.03) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .bank-details-card {
+      background: linear-gradient(135deg, #1c1a14 0%, #11100d 100%);
+      border: 1px solid rgba(212,175,55,0.25);
+      border-radius: 24px;
+      padding: 35px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    }
+    .bank-chip {
+      width: 45px; height: 35px;
+      background: linear-gradient(135deg, #edd287, #bfa04a);
+      border-radius: 8px; margin-bottom: 25px;
+    }
+    .bank-field { margin-bottom: 20px; }
+    .bank-field:last-child { margin-bottom: 0; }
+    .bank-label {
+      font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px;
+      color: var(--muted); margin-bottom: 5px;
+    }
+    .bank-value { font-size: 1.4rem; font-weight: 800; letter-spacing: 1px; }
+    .bank-value.acc-num { font-family: monospace; font-size: 1.7rem; color: var(--gold-light); }
+    .copy-btn {
+      background: rgba(212,175,55,0.1); border: 1px solid rgba(212,175,55,0.2);
+      color: var(--gold-light); padding: 6px 14px; border-radius: 8px;
+      font-size: 0.75rem; font-weight: 600; cursor: pointer;
+      margin-top: 8px; display: inline-flex; align-items: center;
+      gap: 6px; transition: all 0.2s; font-family: inherit;
+    }
+    .copy-btn:hover { background: var(--gold); color: #000; }
+
+    @media (max-width: 900px) {
+      .ep-container { grid-template-columns: 1fr; }
+      .ep-details h2 { font-size: 2.2rem; }
+      .foundation-box { padding: 36px 24px; }
+      .yt-channels-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .video-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="https://wa.me/2348030702010?text=Hi%20Adagache%20Media,%20I%20want%20to%20partner%20with%20you" class="floating-wa" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<header>
+  <div class="nav-container">
+    <a href="index.html" class="logo-area">
+      <img src="images/logo.png" alt="Adagache Group Logo" class="site-logo" id="siteLogo"
+        onerror="this.src='https://placehold.co/180x60/111111/d4af37?text=ADAGACHE'">
+      <div class="logo-text">
+        <h1 class="gold-text">ADAGACHE GROUP</h1>
+        <p>MULTI-SECTOR EXCELLENCE</p>
+      </div>
+    </a>
+    <button class="mobile-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="properties.html"><i class="fas fa-city" style="color:var(--gold);font-size:0.75rem;"></i> Properties</a>
+      <a href="oil-gas.html"><i class="fas fa-fire-flame-curved" style="color:var(--gold);font-size:0.75rem;"></i> Oil &amp; Gas</a>
+      <a href="travel.html"><i class="fas fa-plane" style="color:var(--gold);font-size:0.75rem;"></i> Travel</a>
+      <a href="integrated.html"><i class="fas fa-globe" style="color:var(--gold);font-size:0.75rem;"></i> Integrated</a>
+      <a href="media.html" class="active"><i class="fas fa-film" style="color:var(--gold);font-size:0.75rem;"></i> Media</a>
+      <a href="autos.html"><i class="fas fa-car" style="color:var(--gold);font-size:0.75rem;"></i> Autos</a>
+      <a href="https://wa.me/2348030702010" class="nav-btn" target="_blank"><i class="fab fa-whatsapp"></i> Contact Group</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="service-hero">
+  <div class="service-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1920&q=80');"></div>
+  <div class="service-hero-overlay"></div>
+  <div class="service-hero-content">
+    <div class="service-hero-tag"><i class="fas fa-music"></i> Expression & Humanity</div>
+    <h2>CREATIVE MEDIA &<br><span class="media-gradient">PHILANTHROPY</span></h2>
+    <p>The ultimate expression of faith, artistic storytelling, and human compassion — led by Adagache John Abbah. Blending musical artistry, visual entertainment, and structural purpose to lift lives and redefine horizons.</p>
+    <div class="service-hero-actions">
+      <a href="#channels" class="secondary-btn"><i class="fab fa-youtube" style="color:#ff0000;"></i> Watch on YouTube</a>
+      <a href="#ep" class="primary-btn" style="background:linear-gradient(135deg,#ff6b35,#f7931a);color:white;">
+        <i class="fas fa-music"></i> Stream King Jesus EP
+      </a>
+    </div>
+    <div class="hero-stats-bar">
+      <div class="hero-stat"><h3 class="gold-text">EP</h3><p>King Jesus Debut</p></div>
+      <div class="hero-stat"><h3 class="gold-text">3</h3><p>YouTube Channels</p></div>
+      <div class="hero-stat"><h3 class="gold-text">100%</h3><p>Charity Transparency</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- YOUTUBE CHANNELS -->
+<section class="section" id="channels">
+  <div class="container">
+    <div class="section-head">
+      <small>Subscribe & Follow</small>
+      <h2>Our <span style="color:#ff0000;">YouTube</span> Channels</h2>
+      <p>Three distinct channels covering real estate, entertainment, and music — subscribe to stay connected with the Adagache world.</p>
+    </div>
+    <div class="yt-channels-grid">
+
+      <!-- Channel 1: Adagache Homes -->
+      <a href="https://youtube.com/@adagachehomes?si=-Ik_hPJtsmE8AEc4" target="_blank" class="yt-channel-card">
+        <img class="yt-channel-banner"
+          src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=60"
+          alt="Adagache Homes Banner">
+        <div class="yt-channel-body">
+          <div class="yt-channel-icon"><i class="fab fa-youtube"></i></div>
+          <div class="yt-channel-info">
+            <h4>@adagachehomes</h4>
+            <p>Real estate walkthroughs, Solar City Apo updates, investment insights, and estate development content.</p>
+            <div class="yt-subscribe-tag"><i class="fab fa-youtube"></i> Subscribe Now</div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Channel 2: SlizeTV -->
+      <a href="https://youtube.com/@slizetv1?si=ibIujFnOwPJUivJv" target="_blank" class="yt-channel-card">
+        <img class="yt-channel-banner"
+          src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=60"
+          alt="SlizeTV Banner">
+        <div class="yt-channel-body">
+          <div class="yt-channel-icon" style="background:linear-gradient(135deg,#ff416c,#ff4b2b);"><i class="fab fa-youtube"></i></div>
+          <div class="yt-channel-info">
+            <h4>@slizetv1</h4>
+            <p>Entertainment, lifestyle, celebrity features, and creative storytelling from the Adagache entertainment ecosystem.</p>
+            <div class="yt-subscribe-tag"><i class="fab fa-youtube"></i> Subscribe Now</div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Channel 3: Jblingz Music -->
+      <a href="https://youtube.com/@jblingzmusic?si=2dUnZF8IRIa14jHA" target="_blank" class="yt-channel-card">
+        <img class="yt-channel-banner"
+          src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=800&q=60"
+          alt="Jblingz Music Banner">
+        <div class="yt-channel-body">
+          <div class="yt-channel-icon" style="background:linear-gradient(135deg,#d4af37,#8f690a);"><i class="fab fa-youtube"></i></div>
+          <div class="yt-channel-info">
+            <h4>@jblingzmusic</h4>
+            <p>Official music videos, audio releases, live sessions, and faith-driven performances by Jblingz Adagache.</p>
+            <div class="yt-subscribe-tag"><i class="fab fa-youtube"></i> Subscribe Now</div>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO SHOWROOM — 3 KING JESUS EP themed videos -->
+<section class="section" id="videos" style="background:#0a0a0a;border-top:1px solid var(--border);">
+  <div class="container">
+    <div class="section-head">
+      <small>Video Showroom</small>
+      <h2>King Jesus EP — <span class="gold-text">Watch Now</span></h2>
+      <p>Stream the King Jesus EP music videos, lyric videos, and behind-the-scenes content — directly on Jblingz Music YouTube channel.</p>
+    </div>
+    <div class="video-grid">
+
+      <!-- Video 1 -->
+      <a href="https://youtube.com/@jblingzmusic?si=2dUnZF8IRIa14jHA" target="_blank" class="video-card">
+        <div class="thumbnail-wrapper">
+          <img
+            src="https://images.unsplash.com/photo-1598387993441-a364f854c3e1?auto=format&fit=crop&w=800&q=70"
+            alt="King Jesus EP"
+            onerror="this.src='https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=70'">
+          <div class="play-overlay">
+            <div class="play-btn-icon"><i class="fas fa-play"></i></div>
+          </div>
+        </div>
+        <div class="video-info">
+          <span class="video-tag">Music Release</span>
+          <h3 class="video-title">The King Jesus EP — Official Visual</h3>
+          <div class="yt-badge"><i class="fab fa-youtube"></i> Watch on YouTube</div>
+        </div>
+      </a>
+
+      <!-- Video 2 -->
+      <a href="https://youtube.com/@jblingzmusic?si=2dUnZF8IRIa14jHA" target="_blank" class="video-card">
+        <div class="thumbnail-wrapper">
+          <img
+            src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=70"
+            alt="Faith Anthems Live"
+            onerror="this.src='https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=70'">
+          <div class="play-overlay">
+            <div class="play-btn-icon"><i class="fas fa-play"></i></div>
+          </div>
+        </div>
+        <div class="video-info">
+          <span class="video-tag">Live Session</span>
+          <h3 class="video-title">Faith-Driven Anthems — Acoustic Live</h3>
+          <div class="yt-badge"><i class="fab fa-youtube"></i> Watch on YouTube</div>
+        </div>
+      </a>
+
+      <!-- Video 3 -->
+      <a href="https://youtube.com/@jblingzmusic?si=2dUnZF8IRIa14jHA" target="_blank" class="video-card">
+        <div class="thumbnail-wrapper">
+          <img
+            src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=70"
+            alt="Behind the EP"
+            onerror="this.src='https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=70'">
+          <div class="play-overlay">
+            <div class="play-btn-icon"><i class="fas fa-play"></i></div>
+          </div>
+        </div>
+        <div class="video-info">
+          <span class="video-tag">Behind The Scenes</span>
+          <h3 class="video-title">Making of King Jesus EP — Studio Story</h3>
+          <div class="yt-badge"><i class="fab fa-youtube"></i> Watch on YouTube</div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- KING JESUS EP FEATURE -->
+<section class="section ep-section" id="ep">
+  <div class="container">
+    <div class="ep-container">
+
+      <div class="ep-artwork">
+        <span class="ep-rotating-icon">💿</span>
+        <h3 class="gold-text">King Jesus EP</h3>
+        <p>Debut Album · Jblingz Adagache · 2022</p>
+      </div>
+
+      <div class="ep-details">
+        <div class="ep-label"><i class="fas fa-music"></i> Debut Extended Play</div>
+        <h2>The <span class="gold-text">King Jesus EP</span><br>by Jblingz</h2>
+        <p>A deeply personal and faith-driven debut EP released in 2022 by Jblingz Adagache — entrepreneur, CEO, and recording artist. The King Jesus EP weaves themes of identity, spirituality, resilience, and excellence into a powerful musical statement that reflects the artist's core values and life journey.</p>
+        <p style="font-size:0.88rem;">Stream now on Audiomack and all major platforms. Every track is a declaration of faith, purpose, and the pursuit of greatness — from Abuja to the world.</p>
+
+        <ul class="ep-tracklist">
+          <li class="ep-track"><span class="ep-track-num">1</span><span class="ep-track-name">King Jesus</span><span class="ep-track-dur">🎵 Title Track</span></li>
+          <li class="ep-track"><span class="ep-track-num">2</span><span class="ep-track-name">Identity</span><span class="ep-track-dur">🎵 Faith Anthem</span></li>
+          <li class="ep-track"><span class="ep-track-num">3</span><span class="ep-track-name">Resilience</span><span class="ep-track-dur">🎵 Purpose Song</span></li>
+          <li class="ep-track"><span class="ep-track-num">4</span><span class="ep-track-name">Excellence</span><span class="ep-track-dur">🎵 Inspiration</span></li>
+          <li class="ep-track"><span class="ep-track-num">5</span><span class="ep-track-name">Legacy</span><span class="ep-track-dur">🎵 Closing Track</span></li>
+        </ul>
+
+        <div style="display:flex;gap:16px;flex-wrap:wrap;">
+          <a href="https://audiomack.com/jblingzmusic/album/king-jesus-ep?share-user-id=21403812" target="_blank" class="ep-stream-btn">
+            <i class="fas fa-headphones"></i> Stream on Audiomack
+          </a>
+          <a href="https://youtube.com/@jblingzmusic?si=2dUnZF8IRIa14jHA" target="_blank"
+            style="display:inline-flex;align-items:center;gap:12px;padding:16px 28px;border-radius:50px;font-weight:800;font-size:0.95rem;text-decoration:none;background:#ff0000;color:white;transition:0.3s;"
+            onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 30px rgba(255,0,0,0.3)';"
+            onmouseout="this.style.transform='none';this.style.boxShadow='none';">
+            <i class="fab fa-youtube"></i> Watch Videos
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDATION -->
+<section class="section" id="foundation" style="background:#0d0d0d;border-top:1px solid var(--border);">
+  <div class="container">
+    <div class="foundation-box">
+      <div class="why-grid" style="grid-template-columns:1.2fr 0.8fr;gap:40px;">
+        <div style="margin-bottom:0;">
+          <div style="color:var(--gold);font-weight:700;font-size:0.75rem;letter-spacing:4px;text-transform:uppercase;margin-bottom:14px;">Humanitarian Arm</div>
+          <h2 class="foundation-gradient" style="font-size:2.8rem;margin-bottom:20px;">ADAGACHE FOUNDATION</h2>
+          <p style="font-size:1.02rem;line-height:1.8;color:#d2d2d2;margin-bottom:20px;">Adagache Foundation is a beacon of hope and compassion, a place where love finds expression through service to humanity. Established by Adagache Homes Estate under the visionary leadership of Adagache John Abbah, the foundation is driven by a deep commitment to making a difference in the lives of the less privileged.</p>
+          <p style="font-size:0.95rem;line-height:1.8;color:var(--muted);">Through your kind support, interventions stretch across immediate community care, basic provisions, and educational structural access, establishing long-term lifelines for underrepresented groups in Nigeria.</p>
+        </div>
+        <div>
+          <div class="bank-details-card">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+              <div class="bank-chip"></div>
+              <i class="fas fa-heart" style="color:#ff4b2b;font-size:1.4rem;"></i>
+            </div>
+            <div class="bank-field">
+              <div class="bank-label">Bank Name</div>
+              <div class="bank-value">Access Bank</div>
+            </div>
+            <div class="bank-field">
+              <div class="bank-label">Account Number</div>
+              <div class="bank-value acc-num" id="accountNumber">0025494693</div>
+              <button class="copy-btn" onclick="copyAccount()"><i class="far fa-copy"></i> Copy Number</button>
+            </div>
+            <div class="bank-field" style="margin-bottom:0;">
+              <div class="bank-label">Account Name</div>
+              <div class="bank-value" style="font-size:1.15rem;color:#fff;">Adagache John Abbah</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-section glass">
+      <div class="section-head" style="margin-bottom:0;">
+        <small>Get Involved</small>
+        <h2>Partner With The <span class="gold-text">Vision</span></h2>
+        <p>Sponsor a production, feature artistic portfolios, or link deep partnerships with Adagache Foundation initiatives — our desk is fully open.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="https://wa.me/2348030702010?text=Hi%20Adagache%20Group,%20I'm%20interested%20in%20partnering%20with%20your%20Media%20and%20Foundation%20initiatives" target="_blank" class="primary-btn">
+          <i class="fab fa-whatsapp"></i> Chat via WhatsApp
+        </a>
+        <a href="tel:08030702010" class="secondary-btn"><i class="fas fa-phone"></i> Call Group Office</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h2 class="gold-text">ADAGACHE GROUP</h2>
+      <p>LUXURY • SPEED • EXCELLENCE</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Adagache Homes</a>
+      <a href="properties.html">Other Properties</a>
+      <a href="oil-gas.html">Oil &amp; Gas</a>
+      <a href="travel.html">Travels &amp; Tours</a>
+      <a href="integrated.html">Integrated Global</a>
+      <a href="autos.html">Autos</a>
+      <a href="media.html">Media &amp; Arts</a>
+    </div>
+    <div class="footer-contact">
+      <a href="https://instagram.com/adagachehomes" class="instagram" target="_blank"><i class="fab fa-instagram"></i> @adagachehomes</a>
+      <a href="mailto:Adagachehomes@gmail.com" style="color:var(--muted);font-size:0.85rem;">Adagachehomes@gmail.com</a>
+      <a href="tel:08030702010" class="phone">08030702010</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  function copyAccount() {
+    const num = document.getElementById('accountNumber').innerText;
+    navigator.clipboard.writeText(num).then(() => {
+      const btn = document.querySelector('.copy-btn');
+      const orig = btn.innerHTML;
+      btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+      btn.style.background = '#25d366';
+      btn.style.color = '#000';
+      setTimeout(() => { btn.innerHTML = orig; btn.style.background = ''; btn.style.color = ''; }, 2000);
+    }).catch(() => {});
+  }
+</script>
+</body>
+</html>
