@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Other Properties | Adagache Group</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<a href="https://wa.me/2348030702010?text=Hi%20Adagache%20Group,%20I%20found%20a%20property%20I%20am%20interested%20in" class="floating-wa" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- PROPERTY DETAIL MODAL -->
+<div class="prop-modal-overlay" id="propModal">
+  <div class="prop-modal-window">
+    <button class="prop-modal-close" id="propModalCloseBtn"><i class="fas fa-times"></i></button>
+    <img class="prop-modal-img" id="propModalImg" src="" alt="">
+    <div class="prop-modal-body">
+      <div class="prop-modal-company" id="propModalCompany"></div>
+      <h2 class="prop-modal-title" id="propModalTitle"></h2>
+      <div class="prop-modal-location" id="propModalLocation"></div>
+      <p class="prop-modal-desc" id="propModalDesc"></p>
+      <div class="prop-modal-features" id="propModalFeatures"></div>
+      <div class="prop-modal-price gold-text" id="propModalPrice"></div>
+      <a href="#" class="prop-wa-btn" id="propModalWaBtn" target="_blank">
+        <i class="fab fa-whatsapp"></i> Get In Touch — WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="nav-container">
+    <a href="index.html" class="logo-area">
+      <img src="images/logo.png" alt="Adagache Group Logo" class="site-logo" id="siteLogo"
+        onerror="this.src='https://placehold.co/180x60/111111/d4af37?text=ADAGACHE'">
+      <div class="logo-text">
+        <h1 class="gold-text">ADAGACHE GROUP</h1>
+        <p>MULTI-SECTOR EXCELLENCE</p>
+      </div>
+    </a>
+    <button class="mobile-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="properties.html" class="active"><i class="fas fa-city" style="color:var(--gold);font-size:0.75rem;"></i> Properties</a>
+      <a href="oil-gas.html"><i class="fas fa-fire-flame-curved" style="color:var(--gold);font-size:0.75rem;"></i> Oil &amp; Gas</a>
+      <a href="travel.html"><i class="fas fa-plane" style="color:var(--gold);font-size:0.75rem;"></i> Travel</a>
+      <a href="integrated.html"><i class="fas fa-globe" style="color:var(--gold);font-size:0.75rem;"></i> Integrated</a>
+      <a href="media.html"><i class="fas fa-film" style="color:var(--gold);font-size:0.75rem;"></i> Media</a>
+      <a href="autos.html"><i class="fas fa-car" style="color:var(--gold);font-size:0.75rem;"></i> Autos</a>
+      <a href="https://wa.me/2348030702010" class="nav-btn" target="_blank"><i class="fab fa-whatsapp"></i> Contact Group</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="service-hero">
+  <div class="service-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1920&q=80');"></div>
+  <div class="service-hero-overlay"></div>
+  <div class="service-hero-content">
+    <div class="service-hero-tag"><i class="fas fa-city"></i> Premium Real Estate Marketplace</div>
+    <h2>OTHER <span class="gold-text">PROPERTIES</span></h2>
+    <p>Handpicked premium real estate listings from Nigeria's most trusted property companies — across Abuja, Lagos, the North, South, East, and West. Browse, explore, and connect directly via WhatsApp.</p>
+    <div class="service-hero-actions">
+      <a href="#listings" class="secondary-btn"><i class="fas fa-search"></i> Browse All Listings</a>
+      <a href="https://wa.me/2348030702010?text=Hi%20Adagache%20Group,%20I%20want%20to%20list%20my%20property" target="_blank" class="primary-btn"><i class="fab fa-whatsapp"></i> List Your Property</a>
+    </div>
+    <div class="hero-stats-bar">
+      <div class="hero-stat"><h3 class="gold-text">6</h3><p>Partner Companies</p></div>
+      <div class="hero-stat"><h3 class="gold-text">30+</h3><p>Premium Listings</p></div>
+      <div class="hero-stat"><h3 class="gold-text">Nigeria</h3><p>Nationwide Coverage</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO NOTE -->
+<section style="padding:50px 25px;background:#0a0a0a;border-bottom:1px solid var(--border);">
+  <div class="container" style="text-align:center;max-width:750px;">
+    <p style="color:var(--muted);line-height:1.85;font-size:1rem;">
+      Adagache Group presents curated real estate listings from <strong style="color:var(--gold-light);">6 carefully selected partner companies</strong> across Nigeria. Each listing includes full details and a direct WhatsApp contact button to get in touch instantly. <strong style="color:white;">Click any property card</strong> to view its full profile.
+    </p>
+  </div>
+</section>
+
+<!-- PROPERTIES LISTINGS -->
+<section class="section" id="listings">
+  <div class="container">
+    <div id="propertiesContainer"></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section" style="background:#0d0d0d;border-top:1px solid var(--border);">
+  <div class="container">
+    <div class="cta-section glass">
+      <div class="section-head" style="margin-bottom:0;">
+        <small>List With Adagache</small>
+        <h2>Have A Property To <span class="gold-text">List?</span></h2>
+        <p>Partner with Adagache Group to list your properties and reach thousands of qualified buyers and investors across Nigeria and the diaspora.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="https://wa.me/2348030702010?text=Hi%20Adagache%20Group,%20I%20want%20to%20list%20my%20property%20on%20your%20platform" target="_blank" class="primary-btn"><i class="fab fa-whatsapp"></i> List Your Property</a>
+        <a href="index.html" class="secondary-btn"><i class="fas fa-home"></i> View Solar City Apo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h2 class="gold-text">ADAGACHE GROUP</h2>
+      <p>LUXURY • SPEED • EXCELLENCE</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Adagache Homes</a>
+      <a href="properties.html">Other Properties</a>
+      <a href="oil-gas.html">Oil &amp; Gas</a>
+      <a href="travel.html">Travels &amp; Tours</a>
+      <a href="integrated.html">Integrated Global</a>
+      <a href="autos.html">Autos</a>
+      <a href="media.html">Media &amp; Arts</a>
+    </div>
+    <div class="footer-contact">
+      <a href="https://instagram.com/adagachehomes" class="instagram" target="_blank"><i class="fab fa-instagram"></i> @adagachehomes</a>
+      <a href="mailto:Adagachehomes@gmail.com" style="color:var(--muted);font-size:0.85rem;">Adagachehomes@gmail.com</a>
+      <a href="tel:08030702010" class="phone">08030702010</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
