@@ -6,7 +6,7 @@
 // ========== DATA ==========
 const plotsData = [
   { size: "170 SQM", price: 9000000, name: "3 Bedroom Terrace", badge: "Best Seller", prototype: "170 SQM 3 Bedroom Terrace", img: "images/170sqm.webp" },
-  { size: "250 SQM", price: 1340000, name: "4 Bedroom Semi-Detached", badge: "Fast Selling", prototype: "250 SQM 4 Bedroom Semi-Detached", img: "images/250sqm.webp" },
+  { size: "250 SQM", price: 13400000, name: "4 Bedroom Semi-Detached", badge: "Fast Selling", prototype: "250 SQM 4 Bedroom Semi-Detached", img: "images/250sqm.webp" },
   { size: "350 SQM", price: 19000000, name: "4 Bedroom Fully Detached", badge: "Premium", prototype: "350 SQM 4 Bedroom Fully Detached", img: "images/350sqm.webp" },
   { size: "450 SQM", price: 24000000, name: "5 Bedroom Detached", badge: "Luxury", prototype: "450 SQM 5 Bedroom Detached", img: "images/450sqm.webp" },
   { size: "600 SQM", price: 31800000, name: "6 Bedroom Mansion", badge: "Elite", prototype: "600 SQM 6 Bedroom Mansion", img: "images/600sqm.webp" },
