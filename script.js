@@ -5,12 +5,12 @@
 
 // ========== DATA ==========
 const plotsData = [
-  { size: "170 SQM", price: 4500000, name: "3 Bedroom Terrace", badge: "Best Seller", prototype: "170 SQM 3 Bedroom Terrace", img: "images/170sqm.webp" },
-  { size: "250 SQM", price: 6700000, name: "4 Bedroom Semi-Detached", badge: "Fast Selling", prototype: "250 SQM 4 Bedroom Semi-Detached", img: "images/250sqm.webp" },
-  { size: "350 SQM", price: 9500000, name: "4 Bedroom Fully Detached", badge: "Premium", prototype: "350 SQM 4 Bedroom Fully Detached", img: "images/350sqm.webp" },
-  { size: "450 SQM", price: 12000000, name: "5 Bedroom Detached", badge: "Luxury", prototype: "450 SQM 5 Bedroom Detached", img: "images/450sqm.webp" },
-  { size: "600 SQM", price: 15900000, name: "6 Bedroom Mansion", badge: "Elite", prototype: "600 SQM 6 Bedroom Mansion", img: "images/600sqm.webp" },
-  { size: "1000 SQM", price: 27000000, name: "Block of Flats", badge: "Investor Choice", prototype: "1000 SQM Block of Flats", img: "images/1000sqm.webp" }
+  { size: "170 SQM", price: 9000000, name: "3 Bedroom Terrace", badge: "Best Seller", prototype: "170 SQM 3 Bedroom Terrace", img: "images/170sqm.webp" },
+  { size: "250 SQM", price: 1340000, name: "4 Bedroom Semi-Detached", badge: "Fast Selling", prototype: "250 SQM 4 Bedroom Semi-Detached", img: "images/250sqm.webp" },
+  { size: "350 SQM", price: 19000000, name: "4 Bedroom Fully Detached", badge: "Premium", prototype: "350 SQM 4 Bedroom Fully Detached", img: "images/350sqm.webp" },
+  { size: "450 SQM", price: 24000000, name: "5 Bedroom Detached", badge: "Luxury", prototype: "450 SQM 5 Bedroom Detached", img: "images/450sqm.webp" },
+  { size: "600 SQM", price: 31800000, name: "6 Bedroom Mansion", badge: "Elite", prototype: "600 SQM 6 Bedroom Mansion", img: "images/600sqm.webp" },
+  { size: "1000 SQM", price: 54000000, name: "Block of Flats", badge: "Investor Choice", prototype: "1000 SQM Block of Flats", img: "images/1000sqm.webp" }
 ];
 
 const ceoBioFullHTML = `
@@ -363,7 +363,7 @@ const companiesData = [
       { title: "Solar City Apo — 250 SQM", location: "Apo, Burum West District, Abuja", type: "Land Plot", price: "₦13,400,000", beds: 0, baths: 0, sqm: "250 SQM", desc: "A 250 SQM plot in Solar City Apo, Apo, Burum West District, Abuja. FCDA C of O. Estate features include green space, instant allocation, well-planned vicinity, business district, security personnel, central borehole, and shopping mall.", img: "https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4?auto=format&fit=crop&w=800&q=80" },
       { title: "Solar City Apo — 350 SQM", location: "Apo, Burum West District, Abuja", type: "Land Plot", price: "₦19,000,000", beds: 0, baths: 0, sqm: "350 SQM", desc: "A 350 SQM plot in Solar City Apo, Apo, Burum West District, Abuja. FCDA C of O. Estate features include green space, instant allocation, well-planned vicinity, business district, security personnel, central borehole, and shopping mall.", img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80" },
       { title: "Solar City Apo — 450 SQM", location: "Apo, Burum West District, Abuja", type: "Land Plot", price: "₦24,000,000", beds: 0, baths: 0, sqm: "450 SQM", desc: "A 450 SQM plot in Solar City Apo, Apo, Burum West District, Abuja. FCDA C of O. Estate features include green space, instant allocation, well-planned vicinity, business district, security personnel, central borehole, and shopping mall.", img: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
-      { title: "Solar City Apo — 600 SQM", location: "Apo, Burum West District, Abuja", type: "Land Plot", price: "₦30,000,000", beds: 0, baths: 0, sqm: "600 SQM", desc: "A 600 SQM plot in Solar City Apo, Apo, Burum West District, Abuja. FCDA C of O. Estate features include green space, instant allocation, well-planned vicinity, business district, security personnel, central borehole, and shopping mall.", img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" }
+      { title: "Solar City Apo — 600 SQM", location: "Apo, Burum West District, Abuja", type: "Land Plot", price: "₦31,800,000", beds: 0, baths: 0, sqm: "600 SQM", desc: "A 600 SQM plot in Solar City Apo, Apo, Burum West District, Abuja. FCDA C of O. Estate features include green space, instant allocation, well-planned vicinity, business district, security personnel, central borehole, and shopping mall.", img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" }
     ]
   }
 ];
